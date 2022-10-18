@@ -10,7 +10,7 @@ declare namespace App {
 	// interface Error {}
 	interface Platform {
 		env?: {
-			BUCKETKIT: bucketkit;
+			BUCKETKIT: 'k1-bucketkit';
 		};
 	}
 }
