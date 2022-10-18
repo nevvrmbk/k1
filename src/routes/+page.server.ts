@@ -1,5 +1,6 @@
-export function load({ platform: { env } }: any) {
-    console.log(env);
-
-    return {};
+export function load(page: any) {
+    console.log(page);
+    return {
+        ip: page.getClientAddress(),
+    };
 }
