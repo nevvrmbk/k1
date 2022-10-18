@@ -1,12 +1,15 @@
 export function load({ getClientAddress, platform }: any) {
 	try {
-		const value = platform.env.BUCKETKIT.get('<KEY>');
+		platform.env.BUCKETKIT.put('one', 'the quick brown fox jumps over the lazy dog');
+		const value = platform.env.BUCKETKIT.get('one');
 		return {
 			ip: getClientAddress(),
 			value: value
 		};
 	} catch (error) {
 		console.log(error);
-        return {};
+        return {
+			ip: getClientAddress(),
+		};
 	}
 }
