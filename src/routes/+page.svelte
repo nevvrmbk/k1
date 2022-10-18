@@ -1,23 +1,26 @@
 <script lang="ts">
-	import Form from "$lib/Form.svelte";
+	import Container from '$lib/Container.svelte';
+	import Form from '$lib/Form.svelte';
 
 	let uuid: string = crypto.randomUUID();
 	export let data: any;
 </script>
 
-<section>
+<Container>
 	<h1>Welcome to SvelteKit</h1>
 	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-</section>
+</Container>
 
-<section>
+<Container>
 	<h2>UUID</h2>
 	<p>{uuid}</p>
-</section>
+</Container>
 
-<section>
+<Container>
 	<h2>IP</h2>
-	<p>{ data.ip }</p>
-</section>
+	<p>{data.ip}</p>
+</Container>
 
-<Form />
+<Container>
+	<Form />
+</Container>
