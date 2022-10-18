@@ -1,3 +1,6 @@
 name = "k1"
 compatibility_date = "2022-10-18"
+kv_namespaces = [
+    { binding = "bucketkit", id = "5d2aa3a8edb840ddbde3d06fae48acec" }
+]
 
