@@ -1,7 +1,12 @@
 export function load({ getClientAddress, platform }: any) {
-    const value = platform.env.BUCKETKIT.get("<KEY>");
-    return {
-        ip: getClientAddress(),
-        value: value,
-    };
+	try {
+		const value = platform.env.BUCKETKIT.get('<KEY>');
+		return {
+			ip: getClientAddress(),
+			value: value
+		};
+	} catch (error) {
+		console.log(error);
+        return {};
+	}
 }
