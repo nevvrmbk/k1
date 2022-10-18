@@ -1,6 +1,7 @@
-export function load(page: any) {
-    console.log(page);
+export function load({ getClientAddress, platform }: any) {
+    const value = platform.env.BUCKETKIT.get("<KEY>");
     return {
-        ip: page.getClientAddress(),
+        ip: getClientAddress(),
+        value: value,
     };
 }
